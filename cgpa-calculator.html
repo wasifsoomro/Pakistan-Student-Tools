@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CGPA Calculator Pakistan — 4.0 & 5.0 Scale (HEC Universities)</title>
+  <meta name="description" content="Free CGPA calculator for Pakistani university students. Supports 4.0 and 5.0 grading scales used by HEC recognized universities. Calculate semester GPA instantly.">
+  <link rel="canonical" href="https://pakistanstudenttools.com/cgpa-calculator.html">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Google Analytics placeholder -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+  <meta property="og:title" content="CGPA Calculator Pakistan — 4.0 & 5.0 Scale">
+  <meta property="og:description" content="Free CGPA calculator for Pakistani university students. Supports 4.0 and 5.0 grading scales.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pakistanstudenttools.com/cgpa-calculator.html">
+  <meta property="og:site_name" content="Pakistan Student Tools">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="CGPA Calculator Pakistan — 4.0 & 5.0 Scale">
+  <meta name="twitter:description" content="Free CGPA calculator for Pakistani university students. Supports 4.0 and 5.0 grading scales.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "CGPA Calculator Pakistan",
+    "url": "https://pakistanstudenttools.com/cgpa-calculator.html",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "PKR"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="nav-logo">Pakistan Student Tools</a>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropdown-toggle">Tools</button>
+          <div class="dropdown-menu">
+            <a href="matric-calculator.html">Matric Calculator</a>
+            <a href="inter-calculator.html">Inter Calculator</a>
+            <a href="nust-calculator.html">NUST Calculator</a>
+            <a href="cgpa-calculator.html">CGPA Calculator</a>
+            <a href="merit-calculator.html">Merit Calculator</a>
+            <a href="punjab-board.html">Punjab Board</a>
+            <a href="sindh-board.html">Sindh Board</a>
+            <a href="fbise-board.html">FBISE Board</a>
+          </div>
+        </div>
+        <a href="all-boards.html">Boards</a>
+        <a href="all-universities.html">Universities</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="breadcrumb container"><a href="index.html">Home</a> &rsaquo; CGPA Calculator</div>
+
+  <section class="section">
+    <div class="container calculator-card">
+      <h1>CGPA Calculator Pakistan (4.0 & 5.0 Scale)</h1>
+      <p class="mb-2">Calculate your semester or cumulative CGPA for any HEC-recognized Pakistani university. Supports both 4.0 scale (used by NUST, FAST, COMSATS, LUMS) and 5.0 scale (used by Punjab University, UET and others).</p>
+      <!-- Trust Signals -->
+      <div class="trust-badges">
+        <span class="trust-badge">Free to Use</span>
+        <span class="trust-badge">No Signup Required</span>
+        <span class="trust-badge">Works on Mobile</span>
+        <span class="trust-badge">Updated 2026</span>
+      </div>
+
+      <div class="form-group">
+        <label>GPA Scale</label>
+        <select id="gpa-scale">
+          <option value="4">4.0 Scale (NUST, FAST, COMSATS, LUMS)</option>
+          <option value="5">5.0 Scale (Punjab University, UET)</option>
+        </select>
+      </div>
+
+      <div id="courses-container"></div>
+      <button type="button" id="add-course" class="btn btn-secondary mt-1">+ Add Course</button>
+      <div class="mt-2">
+        <button type="button" id="calculate-btn" class="btn btn-primary">Calculate CGPA</button>
+      </div>
+
+      <div id="result-box" class="result-box hidden">
+        <div class="result-label">Your CGPA</div>
+        <div class="result-value" id="cgpa">0.00</div>
+        <p>Out of <strong id="max-gpa">4.00</strong></p>
+        <p>Total Credits: <strong id="total-credits">0</strong> | Quality Points: <strong id="total-points">0</strong></p>
+        <p>Estimated Percentage: <strong id="pct-estimate">0%</strong></p>
+      </div>
+
+      <!-- <div class="ad-placeholder mt-2">Ad Space</div> -->
+
+      <!-- How to Use Section -->
+      <div class="mt-2">
+        <h2>How to Use This CGPA Calculator</h2>
+        <ol>
+          <li>Select your GPA scale — 4.0 or 5.0 (check your university's grading policy).</li>
+          <li>Enter each course name (optional), credit hours, and your grade.</li>
+          <li>Click "+ Add Course" for more rows or × to remove.</li>
+          <li>Click "Calculate CGPA" to see your result.</li>
+        </ol>
+      </div>
+
+      <!-- CGPA Formula -->
+      <div class="mt-2">
+        <h2>How CGPA is Calculated</h2>
+        <p>CGPA (Cumulative Grade Point Average) is calculated by dividing total quality points by total credit hours:</p>
+        <p><strong>Formula:</strong> CGPA = Σ(Credit Hours × Grade Points) / Σ(Credit Hours)</p>
+      </div>
+
+      <!-- Example Calculation -->
+      <div class="mt-2">
+        <h3>Example Calculation (4.0 Scale)</h3>
+        <p>Suppose a student has 5 courses:</p>
+        <ul class="content-page">
+          <li>Calculus (3 credits) — Grade A → 3 × 4.0 = 12.0</li>
+          <li>Physics (3 credits) — Grade B+ → 3 × 3.33 = 9.99</li>
+          <li>English (3 credits) — Grade A- → 3 × 3.67 = 11.01</li>
+          <li>Programming (4 credits) — Grade A → 4 × 4.0 = 16.0</li>
+          <li>Islamiat (2 credits) — Grade B → 2 × 3.0 = 6.0</li>
+        </ul>
+        <p><strong>Total Quality Points:</strong> 55.0</p>
+        <p><strong>Total Credit Hours:</strong> 15</p>
+        <p><strong>CGPA:</strong> 55.0 / 15 = <strong>3.67</strong></p>
+      </div>
+
+      <!-- Grading Tables -->
+      <div class="mt-2">
+        <h2>Grading Scale Reference</h2>
+        <div class="grid-2">
+          <div>
+            <h3>4.0 Scale</h3>
+            <ul class="content-page">
+              <li>A+ / A → 4.00</li>
+              <li>A- → 3.67</li>
+              <li>B+ → 3.33</li>
+              <li>B → 3.00</li>
+              <li>B- → 2.67</li>
+              <li>C+ → 2.33</li>
+              <li>C → 2.00</li>
+              <li>C- → 1.67</li>
+              <li>D+ → 1.33</li>
+              <li>D → 1.00</li>
+              <li>F → 0.00</li>
+            </ul>
+          </div>
+          <div>
+            <h3>5.0 Scale</h3>
+            <ul class="content-page">
+              <li>A+ → 5.00</li>
+              <li>A → 4.00</li>
+              <li>B+ → 3.50</li>
+              <li>B → 3.00</li>
+              <li>B- → 2.50</li>
+              <li>C+ → 2.00</li>
+              <li>C → 1.50</li>
+              <li>C- → 1.00</li>
+              <li>D → 0.50</li>
+              <li>F → 0.00</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEO Content -->
+      <div class="mt-2">
+        <h2>Universities Using Each Scale</h2>
+        <h3>4.0 GPA Scale</h3>
+        <p>Most modern Pakistani universities follow the 4.0 scale as recommended by HEC (Higher Education Commission): NUST, FAST-NUCES, COMSATS, LUMS, GIKI, IBA Karachi, Air University, Bahria University, and PIEAS.</p>
+        <h3>5.0 GPA Scale</h3>
+        <p>Some older public universities still use the 5.0 scale: University of Punjab, UET Lahore, University of Karachi, University of Peshawar, and several other provincial universities.</p>
+      </div>
+
+      <!-- FAQ -->
+      <div class="mt-2">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <h3>How do I convert CGPA to percentage?</h3>
+          <p>For 4.0 scale: multiply CGPA by 25 (e.g., 3.5 × 25 = 87.5%). For 5.0 scale: multiply by 20 (e.g., 4.0 × 20 = 80%). These are approximate conversions used by HEC.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What is a good CGPA in Pakistan?</h3>
+          <p>On a 4.0 scale: 3.5+ is excellent, 3.0–3.49 is good, 2.5–2.99 is average. On a 5.0 scale: 4.0+ is excellent, 3.5–3.99 is good.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I calculate cumulative CGPA for multiple semesters?</h3>
+          <p>Yes — just add all courses from all semesters. The calculator will give you the cumulative CGPA across all courses entered.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Which scale does HEC recommend?</h3>
+          <p>HEC recommends the 4.0 grading scale for all Pakistani universities. Most newer and private universities have adopted it.</p>
+        </div>
+      </div>
+
+      <!-- Related Tools -->
+      <div class="mt-2">
+        <h3>Related Tools</h3>
+        <ul class="content-page">
+          <li><a href="merit-calculator.html">University Merit Calculator (FAST, COMSATS, UET, LUMS)</a></li>
+          <li><a href="inter-calculator.html">Inter Percentage Calculator</a></li>
+          <li><a href="matric-calculator.html">Matric Percentage Calculator</a></li>
+          <li><a href="nust-calculator.html">NUST Aggregate Calculator</a></li>
+        </ul>
+      </div>
+    
+      <!-- Disclaimer -->
+      <div class="disclaimer mt-2">
+        <strong>Disclaimer:</strong> This website is not affiliated with any educational board or university. All calculators and tools provided on this site are for informational and estimation purposes only. While we strive to ensure accuracy, results may vary based on official policies and updates. Users are advised to verify results with official sources.
+      </div>
+
+      <!-- Related Tools -->
+      <div class="related-tools">
+        <h3>Related Tools</h3>
+        <a href="matric-calculator.html">Matric Calculator</a>
+        <a href="inter-calculator.html">Inter Calculator</a>
+        <a href="nust-calculator.html">NUST Calculator</a>
+        <a href="cgpa-calculator.html">CGPA Calculator</a>
+        <a href="merit-calculator.html">Merit Calculator</a>
+        <a href="all-boards.html">All Boards</a>
+        <a href="all-universities.html">All Universities</a>
+      </div>
+    </div>
+  </section>
+
+    <div class="last-updated">Last updated: March 2026</div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h4>Pakistan Student Tools</h4><p>Free online calculators for Pakistani students.</p></div>
+        <div><h4>Tools</h4><ul><li><a href="matric-calculator.html">Matric Calculator</a></li><li><a href="inter-calculator.html">Inter Calculator</a></li><li><a href="nust-calculator.html">NUST Calculator</a></li><li><a href="cgpa-calculator.html">CGPA Calculator</a></li><li><a href="merit-calculator.html">Merit Calculator</a></li></ul></div>
+        <div><h4>Pages</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy Policy</a></li></ul></div>
+      </div>
+            <p class="footer-disclaimer">This website is not affiliated with any educational board or university. All tools are for informational purposes only. Verify results with official sources.</p>
+      <div class="footer-bottom">&copy; 2026 Pakistan Student Tools. All rights reserved.</div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/cgpa-calculator.js"></script>
+</body>
+</html>

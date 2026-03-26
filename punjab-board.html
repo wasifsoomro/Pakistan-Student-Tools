@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Punjab Board Matric Calculator — BISE Lahore, Rawalpindi, Multan</title>
+  <meta name="description" content="Calculate your Punjab Board Matric percentage for BISE Lahore, Rawalpindi, Multan, Gujranwala, Faisalabad and all Punjab boards.">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Google Analytics placeholder -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+  <link rel="canonical" href="https://pakistanstudenttools.com/punjab-board.html">
+  <meta property="og:title" content="Punjab Board Matric Calculator — BISE Lahore, Rawalpindi, Multan">
+  <meta property="og:description" content="Calculate your Punjab Board Matric percentage for BISE Lahore, Rawalpindi, Multan, Gujranwala, Faisalabad and all Punjab boards.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pakistanstudenttools.com/punjab-board.html">
+  <meta property="og:site_name" content="Pakistan Student Tools">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Punjab Board Matric Calculator — BISE Lahore, Rawalpindi, Multan">
+  <meta name="twitter:description" content="Calculate your Punjab Board Matric percentage for BISE Lahore, Rawalpindi, Multan, Gujranwala, Faisalabad and all Punjab boards.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Punjab Board Matric Calculator",
+    "url": "https://pakistanstudenttools.com/punjab-board.html",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "PKR"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="nav-logo">Pakistan Student Tools</a>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropdown-toggle">Tools</button>
+          <div class="dropdown-menu">
+            <a href="matric-calculator.html">Matric Calculator</a>
+            <a href="inter-calculator.html">Inter Calculator</a>
+            <a href="nust-calculator.html">NUST Calculator</a>
+            <a href="cgpa-calculator.html">CGPA Calculator</a>
+            <a href="merit-calculator.html">Merit Calculator</a>
+            <a href="punjab-board.html">Punjab Board</a>
+            <a href="sindh-board.html">Sindh Board</a>
+            <a href="fbise-board.html">FBISE Board</a>
+          </div>
+        </div>
+        <a href="all-boards.html">Boards</a>
+        <a href="all-universities.html">Universities</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="breadcrumb container"><a href="index.html">Home</a> &rsaquo; <a href="matric-calculator.html">Matric Calculator</a> &rsaquo; Punjab Board</div>
+
+  <section class="section">
+    <div class="container calculator-card">
+      <h1>Punjab Board Matric Percentage Calculator</h1>
+      <p class="mb-2">Calculate your Matric percentage for any Punjab board including BISE Lahore, Rawalpindi, Multan, Gujranwala, Faisalabad, Sargodha, DG Khan, Sahiwal, and Bahawalpur.</p>
+      <!-- Trust Signals -->
+      <div class="trust-badges">
+        <span class="trust-badge">Free to Use</span>
+        <span class="trust-badge">No Signup Required</span>
+        <span class="trust-badge">Works on Mobile</span>
+        <span class="trust-badge">Updated 2026</span>
+      </div>
+
+      <div id="subjects-container"></div>
+      <button type="button" id="add-subject" class="btn btn-secondary mt-1">+ Add Subject</button>
+      <div class="mt-2">
+        <button type="button" id="calculate-btn" class="btn btn-primary">Calculate Percentage</button>
+      </div>
+
+      <div id="result-box" class="result-box hidden">
+        <div class="result-label">Your Percentage</div>
+        <div class="result-value" id="percentage">0%</div>
+        <p>Obtained: <strong id="obtained-marks">0</strong> / <strong id="total-marks">0</strong></p>
+      </div>
+
+      <!-- <div class="ad-placeholder mt-2">Ad Space</div> -->
+
+      <div class="mt-2">
+        <h2>Punjab Board Matric Grading System</h2>
+        <p>All Punjab boards (BISE Lahore, Rawalpindi, Multan, Gujranwala, Faisalabad, Sargodha, DG Khan, Sahiwal, Bahawalpur) follow the same grading system for Matric (SSC) exams. The standard total marks are 1100 for science group and 1050 for general/arts group.</p>
+        <h3>Grade Thresholds</h3>
+        <ul class="content-page">
+          <li><strong>A+:</strong> 80% and above</li>
+          <li><strong>A:</strong> 70% – 79%</li>
+          <li><strong>B:</strong> 60% – 69%</li>
+          <li><strong>C:</strong> 50% – 59%</li>
+          <li><strong>D:</strong> 40% – 49%</li>
+          <li><strong>E:</strong> 33% – 39% (Pass)</li>
+        </ul>
+      </div>
+    
+
+      <div class="mt-2">
+        <h2>How to Use This Calculator</h2>
+        <p>Follow these simple steps to calculate your Punjab Board Matric percentage:</p>
+        <ol class="content-page">
+          <li><strong>Enter your subjects:</strong> The calculator starts with 5 default subject rows. Add or remove subjects as needed using the "+ Add Subject" button.</li>
+          <li><strong>Fill in marks:</strong> For each subject, enter your obtained marks and total marks. The default total is 100 — change it to match your subject's total marks.</li>
+          <li><strong>Click Calculate:</strong> Press the "Calculate Percentage" button to see your total obtained marks, total maximum marks, and overall percentage.</li>
+          <li><strong>Review results:</strong> Your percentage will appear below along with total marks obtained out of maximum possible marks.</li>
+        </ol>
+      </div>
+
+      <div class="mt-2">
+        <h2>Example Calculation</h2>
+        <p>Here is an example for a Punjab Board Science Group student:</p>
+        <table class="content-page" style="width:100%;border-collapse:collapse;margin:1rem 0;">
+          <tr style="background:#f0f7ff;"><th style="padding:8px;text-align:left;border:1px solid #e2e8f0;">Subject</th><th style="padding:8px;text-align:center;border:1px solid #e2e8f0;">Obtained</th><th style="padding:8px;text-align:center;border:1px solid #e2e8f0;">Total</th></tr>
+          <tr><td style="padding:8px;border:1px solid #e2e8f0;">English</td><td style="padding:8px;text-align:center;border:1px solid #e2e8f0;">72</td><td style="padding:8px;text-align:center;border:1px solid #e2e8f0;">75</td></tr>
+          <tr><td style="padding:8px;border:1px solid #e2e8f0;">Urdu</td><td style="padding:8px;text-align:center;border:1px solid #e2e8f0;">68</td><td style="padding:8px;text-align:center;border:1px solid #e2e8f0;">75</td></tr>
+          <tr><td style="padding:8px;border:1px solid #e2e8f0;">Mathematics</td><td style="padding:8px;text-align:center;border:1px solid #e2e8f0;">85</td><td style="padding:8px;text-align:center;border:1px solid #e2e8f0;">75</td></tr>
+          <tr><td style="padding:8px;border:1px solid #e2e8f0;">Physics</td><td style="padding:8px;text-align:center;border:1px solid #e2e8f0;">65</td><td style="padding:8px;text-align:center;border:1px solid #e2e8f0;">75</td></tr>
+          <tr><td style="padding:8px;border:1px solid #e2e8f0;">Chemistry</td><td style="padding:8px;text-align:center;border:1px solid #e2e8f0;">70</td><td style="padding:8px;text-align:center;border:1px solid #e2e8f0;">75</td></tr>
+          <tr style="background:#f0fdf4;"><td style="padding:8px;border:1px solid #e2e8f0;"><strong>Total</strong></td><td style="padding:8px;text-align:center;border:1px solid #e2e8f0;"><strong>923</strong></td><td style="padding:8px;text-align:center;border:1px solid #e2e8f0;"><strong>1100</strong></td></tr>
+        </table>
+        <p><strong>Percentage:</strong> (923 / 1100) x 100 = <strong>83.91%</strong> (Grade: A+)</p>
+      </div>
+
+      <div class="mt-2">
+        <h2>Why Use This Calculator?</h2>
+        <p>Calculating your Matric percentage manually can be time-consuming, especially when you have different total marks for each subject. Our Punjab Board Matric calculator makes it easy by:</p>
+        <ul class="content-page">
+          <li><strong>Handling variable totals:</strong> Different subjects can have different total marks — the calculator handles this automatically.</li>
+          <li><strong>Quick and accurate:</strong> Get instant results without manual math errors.</li>
+          <li><strong>Planning ahead:</strong> Use this before results to estimate your expected percentage based on your preparation level.</li>
+          <li><strong>University admissions:</strong> Know your Matric percentage for university aggregate calculations — many universities require Matric percentage as part of the admission formula.</li>
+        </ul>
+      </div>
+      <div class="mt-2">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item"><h3>How is the percentage calculated?</h3><p>Your percentage is calculated by dividing total obtained marks by total maximum marks, then multiplying by 100. Formula: (Obtained / Total) x 100.</p></div>
+        <div class="faq-item"><h3>What are the total marks for Punjab Board Matric?</h3><p>For Science group, the total marks are 1100. For Arts/General group, the total marks are 1050. This covers BISE Lahore, Rawalpindi, Multan, Gujranwala, Faisalabad, Sargodha, DG Khan, Sahiwal, and Bahawalpur.</p></div>
+        <div class="faq-item"><h3>When are Punjab Board Matric results announced?</h3><p>Punjab Board (BISE Lahore, Rawalpindi, Multan, Gujranwala, Faisalabad, Sargodha, DG Khan, Sahiwal, and Bahawalpur) typically announces Matric results in July-August each year. Check the board website for exact dates.</p></div>
+        <div class="faq-item"><h3>How many boards are in Punjab?</h3><p>Punjab has 9 BISEs: Lahore, Rawalpindi, Multan, Gujranwala, Faisalabad, Sargodha, DG Khan, Sahiwal, and Bahawalpur. All follow the same curriculum and grading system.</p></div>
+        <div class="faq-item"><h3>What is the passing percentage for Punjab Board Matric?</h3><p>The minimum passing percentage is 33% in each subject. Students must pass in all compulsory and elective subjects to receive the Matric certificate.</p></div>
+      </div>
+
+      <!-- Disclaimer -->
+      <div class="disclaimer mt-2">
+        <strong>Disclaimer:</strong> This website is not affiliated with any educational board or university. All calculators and tools provided on this site are for informational and estimation purposes only. While we strive to ensure accuracy, results may vary based on official policies and updates. Users are advised to verify results with official sources.
+      </div>
+
+      <!-- Related Tools -->
+      <div class="related-tools">
+        <h3>Related Tools</h3>
+        <a href="matric-calculator.html">Matric Calculator</a>
+        <a href="inter-calculator.html">Inter Calculator</a>
+        <a href="nust-calculator.html">NUST Calculator</a>
+        <a href="cgpa-calculator.html">CGPA Calculator</a>
+        <a href="merit-calculator.html">Merit Calculator</a>
+        <a href="all-boards.html">All Boards</a>
+        <a href="all-universities.html">All Universities</a>
+      </div>
+    </div>
+  </section>
+
+    <div class="last-updated">Last updated: March 2026</div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h4>Pakistan Student Tools</h4><p>Free online calculators for Pakistani students.</p></div>
+        <div><h4>Tools</h4><ul><li><a href="matric-calculator.html">Matric Calculator</a></li><li><a href="inter-calculator.html">Inter Calculator</a></li><li><a href="nust-calculator.html">NUST Calculator</a></li></ul></div>
+        <div><h4>Pages</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy Policy</a></li></ul></div>
+      </div>
+            <p class="footer-disclaimer">This website is not affiliated with any educational board or university. All tools are for informational purposes only. Verify results with official sources.</p>
+      <div class="footer-bottom">&copy; 2026 Pakistan Student Tools. All rights reserved.</div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/matric-calculator.js"></script>
+</body>
+</html>

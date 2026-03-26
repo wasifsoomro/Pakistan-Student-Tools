@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Pakistan Student Tools</title>
+  <meta name="description" content="Contact Pakistan Student Tools. Send us your questions, feedback, or suggestions.">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Google Analytics placeholder -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+  <link rel="canonical" href="https://pakistanstudenttools.com/contact.html">
+  <meta property="og:title" content="Contact Us — Pakistan Student Tools">
+  <meta property="og:description" content="Contact Pakistan Student Tools. Send us your questions, feedback, or suggestions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pakistanstudenttools.com/contact.html">
+  <meta property="og:site_name" content="Pakistan Student Tools">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Contact Us — Pakistan Student Tools">
+  <meta name="twitter:description" content="Contact Pakistan Student Tools. Send us your questions, feedback, or suggestions.">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="nav-logo">Pakistan Student Tools</a>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropdown-toggle">Tools</button>
+          <div class="dropdown-menu">
+            <a href="matric-calculator.html">Matric Calculator</a>
+            <a href="inter-calculator.html">Inter Calculator</a>
+            <a href="nust-calculator.html">NUST Calculator</a>
+            <a href="cgpa-calculator.html">CGPA Calculator</a>
+            <a href="merit-calculator.html">Merit Calculator</a>
+            <a href="punjab-board.html">Punjab Board</a>
+            <a href="sindh-board.html">Sindh Board</a>
+            <a href="fbise-board.html">FBISE Board</a>
+          </div>
+        </div>
+        <a href="all-boards.html">Boards</a>
+        <a href="all-universities.html">Universities</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="breadcrumb container"><a href="index.html">Home</a> &rsaquo; Contact</div>
+
+  <div class="content-page">
+    <h1>Contact Us</h1>
+    <p>Have a question, found a bug, or want to suggest a new tool? We'd love to hear from you. Fill out the form below and we'll get back to you.</p>
+    <p><strong>We typically respond within 24–48 hours.</strong></p>
+
+    <div class="card mt-2" style="max-width:550px;">
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name <span style="color:#dc2626;">*</span></label>
+          <input type="text" id="name" required placeholder="Enter your full name" minlength="2">
+          <p class="error-msg" id="name-error">Please enter your name (at least 2 characters).</p>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address <span style="color:#dc2626;">*</span></label>
+          <input type="email" id="email" required placeholder="you@example.com">
+          <p class="error-msg" id="email-error">Please enter a valid email address.</p>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject">
+            <option>General Question</option>
+            <option>Bug Report</option>
+            <option>Feature Request</option>
+            <option>Calculator Suggestion</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message <span style="color:#dc2626;">*</span></label>
+          <textarea id="message" required placeholder="Write your message here..." minlength="10"></textarea>
+          <p class="error-msg" id="message-error">Please enter a message (at least 10 characters).</p>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <div id="form-success" class="hidden" style="margin-top:1rem;padding:1rem;background:#f0fdf4;border:1px solid #16a34a;border-radius:8px;color:#15803d;">
+          <strong>Thank you!</strong> Your message has been received. We'll get back to you within 24–48 hours.
+        </div>
+      </form>
+    </div>
+
+    <div class="mt-2">
+      <h2>Other Ways to Reach Us</h2>
+      <p>You can also reach us through the following:</p>
+      <ul>
+        <li><strong>Response Time:</strong> We typically respond within 24–48 hours</li>
+        <li><strong>Best for:</strong> Bug reports, feature requests, partnership inquiries, content suggestions</li>
+      </ul>
+      <p>Before contacting us, you may find answers to common questions on our tool pages — each has a detailed FAQ section.</p>
+    </div>
+  </div>
+
+  <script>
+  // Contact form validation
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    let valid = true;
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const message = document.getElementById('message');
+
+    // Reset errors
+    [name, email, message].forEach(el => { el.classList.remove('input-error'); });
+    document.querySelectorAll('.error-msg').forEach(el => { el.style.display = 'none'; });
+
+    if (name.value.trim().length < 2) {
+      name.classList.add('input-error');
+      document.getElementById('name-error').style.display = 'block';
+      valid = false;
+    }
+    if (!email.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+      email.classList.add('input-error');
+      document.getElementById('email-error').style.display = 'block';
+      valid = false;
+    }
+    if (message.value.trim().length < 10) {
+      message.classList.add('input-error');
+      document.getElementById('message-error').style.display = 'block';
+      valid = false;
+    }
+
+    if (valid) {
+      document.getElementById('form-success').classList.remove('hidden');
+      this.reset();
+    }
+  });
+  </script>
+
+  <!-- <div class="container"><!-- <div class="ad-placeholder">Ad Space</div> --></div> -->
+  
+  <!-- Related Tools -->
+  <div class="related-tools">
+    <h3>Related Tools</h3>
+    <a href="matric-calculator.html">Matric Calculator</a>
+    <a href="inter-calculator.html">Inter Calculator</a>
+    <a href="nust-calculator.html">NUST Calculator</a>
+    <a href="cgpa-calculator.html">CGPA Calculator</a>
+    <a href="merit-calculator.html">Merit Calculator</a>
+    <a href="all-boards.html">All Boards</a>
+    <a href="all-universities.html">All Universities</a>
+  </div>
+  <div class="last-updated">Last updated: March 2026</div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h4>Pakistan Student Tools</h4><p>Free online calculators for Pakistani students.</p></div>
+        <div><h4>Tools</h4><ul><li><a href="matric-calculator.html">Matric Calculator</a></li><li><a href="inter-calculator.html">Inter Calculator</a></li><li><a href="nust-calculator.html">NUST Calculator</a></li></ul></div>
+        <div><h4>Pages</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy Policy</a></li></ul></div>
+      </div>
+            <p class="footer-disclaimer">This website is not affiliated with any educational board or university. All tools are for informational purposes only. Verify results with official sources.</p>
+      <div class="footer-bottom">&copy; 2026 Pakistan Student Tools. All rights reserved.</div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

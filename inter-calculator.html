@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inter Percentage Calculator — HSSC Part 1 & 2 Pakistan</title>
+  <meta name="description" content="Calculate your Intermediate (HSSC) percentage for Part 1 and Part 2 combined. Free tool for all Pakistani boards.">
+  <link rel="canonical" href="https://pakistanstudenttools.com/inter-calculator.html">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Google Analytics placeholder -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+  <meta property="og:title" content="Inter Percentage Calculator — HSSC Part 1 & 2 Pakistan">
+  <meta property="og:description" content="Calculate your Intermediate (HSSC) percentage for Part 1 and Part 2 combined. Free tool for all Pakistani boards.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pakistanstudenttools.com/inter-calculator.html">
+  <meta property="og:site_name" content="Pakistan Student Tools">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Inter Percentage Calculator — HSSC Part 1 & 2 Pakistan">
+  <meta name="twitter:description" content="Calculate your Intermediate (HSSC) percentage for Part 1 and Part 2 combined. Free tool for all Pakistani boards.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Inter Percentage Calculator",
+    "url": "https://pakistanstudenttools.com/inter-calculator.html",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "PKR"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="nav-logo">Pakistan Student Tools</a>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropdown-toggle">Tools</button>
+          <div class="dropdown-menu">
+            <a href="matric-calculator.html">Matric Calculator</a>
+            <a href="inter-calculator.html">Inter Calculator</a>
+            <a href="nust-calculator.html">NUST Calculator</a>
+            <a href="cgpa-calculator.html">CGPA Calculator</a>
+            <a href="merit-calculator.html">Merit Calculator</a>
+            <a href="punjab-board.html">Punjab Board</a>
+            <a href="sindh-board.html">Sindh Board</a>
+            <a href="fbise-board.html">FBISE Board</a>
+          </div>
+        </div>
+        <a href="all-boards.html">Boards</a>
+        <a href="all-universities.html">Universities</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="breadcrumb container"><a href="index.html">Home</a> &rsaquo; Inter Percentage Calculator</div>
+
+  <section class="section">
+    <div class="container calculator-card">
+      <h1>Intermediate Percentage Calculator</h1>
+      <p class="mb-2">Enter your Part 1 (HSSC-I) and Part 2 (HSSC-II) marks to get your combined Intermediate percentage.</p>
+      <!-- Trust Signals -->
+      <div class="trust-badges">
+        <span class="trust-badge">Free to Use</span>
+        <span class="trust-badge">No Signup Required</span>
+        <span class="trust-badge">Works on Mobile</span>
+        <span class="trust-badge">Updated 2026</span>
+      </div>
+
+      <h3>Part 1 (HSSC-I)</h3>
+      <div class="grid-2 mb-1">
+        <div class="form-group"><label>Obtained Marks</label><input type="number" id="part1-obtained" min="0" placeholder="e.g. 420"></div>
+        <div class="form-group"><label>Total Marks</label><input type="number" id="part1-total" min="1" value="550"></div>
+      </div>
+
+      <h3>Part 2 (HSSC-II)</h3>
+      <div class="grid-2 mb-1">
+        <div class="form-group"><label>Obtained Marks</label><input type="number" id="part2-obtained" min="0" placeholder="e.g. 460"></div>
+        <div class="form-group"><label>Total Marks</label><input type="number" id="part2-total" min="1" value="550"></div>
+      </div>
+
+      <button type="button" id="calculate-btn" class="btn btn-primary mt-1">Calculate Percentage</button>
+
+      <div id="result-box" class="result-box hidden">
+        <div class="result-label">Overall Percentage</div>
+        <div class="result-value" id="percentage">0%</div>
+        <p>Obtained: <strong id="obtained-marks">0</strong> / <strong id="total-marks">0</strong></p>
+        <p>Part 1: <strong id="part1-pct">0%</strong> | Part 2: <strong id="part2-pct">0%</strong></p>
+      </div>
+
+      <!-- <div class="ad-placeholder mt-2">Ad Space</div> -->
+
+      <div class="mt-2">
+        <h2>How to Calculate Intermediate Percentage</h2>
+        <p>Add your Part 1 and Part 2 obtained marks together, divide by the combined total marks, and multiply by 100.</p>
+        <p><strong>Formula:</strong> Percentage = ((Part 1 Obtained + Part 2 Obtained) / (Part 1 Total + Part 2 Total)) × 100</p>
+        <p>For example, if you scored 420/550 in Part 1 and 460/550 in Part 2, your percentage is: (880 / 1100) × 100 = 80%.</p>
+      </div>
+
+      <div class="mt-2">
+        <h2>Intermediate Grading System in Pakistan</h2>
+        <p>All Pakistani boards — including Punjab, Sindh, KPK, Balochistan, AJK, and FBISE — use a percentage-based grading system for HSSC (Intermediate) exams. Most boards have 550 total marks per part.</p>
+        <h3>Grade Thresholds</h3>
+        <ul class="content-page">
+          <li><strong>A+:</strong> 80% and above</li>
+          <li><strong>A:</strong> 70% – 79%</li>
+          <li><strong>B:</strong> 60% – 69%</li>
+          <li><strong>C:</strong> 50% – 59%</li>
+          <li><strong>D:</strong> 40% – 49% (Pass)</li>
+        </ul>
+        <h3>Total Marks by Group</h3>
+        <ul class="content-page">
+          <li><strong>Pre-Engineering / Pre-Medical:</strong> 550 per part (1100 total)</li>
+          <li><strong>ICS / Commerce:</strong> 550 per part (1100 total)</li>
+          <li><strong>Humanities / General:</strong> May vary by board (typically 500–550 per part)</li>
+        </ul>
+        <p>Your Intermediate percentage is important for university admissions across Pakistan, including <a href="nust-calculator.html">NUST</a>, FAST, COMSATS, and other HEC-recognized universities.</p>
+      </div>
+
+      <div class="mt-2">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <h3>What is the total marks in Intermediate?</h3>
+          <p>Most boards have 550 marks for each part, making the combined total 1100. Some boards may vary — adjust the total marks fields accordingly.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I calculate percentage for Part 1 only?</h3>
+          <p>Yes, just leave Part 2 fields at 0. The calculator will give you the Part 1 percentage.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does this work for all boards?</h3>
+          <p>Yes — this calculator works for Punjab, Sindh, KPK, Balochistan, AJK, FBISE, and all other Pakistani boards. Just adjust the total marks if your board differs.</p>
+        </div>
+      </div>
+    
+      <!-- Disclaimer -->
+      <div class="disclaimer mt-2">
+        <strong>Disclaimer:</strong> This website is not affiliated with any educational board or university. All calculators and tools provided on this site are for informational and estimation purposes only. While we strive to ensure accuracy, results may vary based on official policies and updates. Users are advised to verify results with official sources.
+      </div>
+
+      <!-- Related Tools -->
+      <div class="related-tools">
+        <h3>Related Tools</h3>
+        <a href="matric-calculator.html">Matric Calculator</a>
+        <a href="inter-calculator.html">Inter Calculator</a>
+        <a href="nust-calculator.html">NUST Calculator</a>
+        <a href="cgpa-calculator.html">CGPA Calculator</a>
+        <a href="merit-calculator.html">Merit Calculator</a>
+        <a href="all-boards.html">All Boards</a>
+        <a href="all-universities.html">All Universities</a>
+      </div>
+    </div>
+  </section>
+
+    <div class="last-updated">Last updated: March 2026</div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h4>Pakistan Student Tools</h4><p>Free online calculators for Pakistani students.</p></div>
+        <div><h4>Tools</h4><ul><li><a href="matric-calculator.html">Matric Calculator</a></li><li><a href="inter-calculator.html">Inter Calculator</a></li><li><a href="nust-calculator.html">NUST Calculator</a></li></ul></div>
+        <div><h4>Pages</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy Policy</a></li></ul></div>
+      </div>
+            <p class="footer-disclaimer">This website is not affiliated with any educational board or university. All tools are for informational purposes only. Verify results with official sources.</p>
+      <div class="footer-bottom">&copy; 2026 Pakistan Student Tools. All rights reserved.</div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/inter-calculator.js"></script>
+</body>
+</html>

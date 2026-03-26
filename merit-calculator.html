@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Merit Calculator Pakistan — FAST, COMSATS, UET, LUMS Aggregate 2026</title>
+  <meta name="description" content="Calculate your university aggregate/merit for FAST-NUCES, COMSATS, UET Lahore, and LUMS. Commonly used formulas with NAT, NTS, ECAT, and SAT weightage.">
+  <link rel="canonical" href="https://pakistanstudenttools.com/merit-calculator.html">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Google Analytics placeholder -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+  <meta property="og:title" content="University Merit Calculator — FAST, COMSATS, UET, LUMS 2026">
+  <meta property="og:description" content="Calculate your university aggregate for FAST, COMSATS, UET, and LUMS using commonly used admission formulas.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pakistanstudenttools.com/merit-calculator.html">
+  <meta property="og:site_name" content="Pakistan Student Tools">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="University Merit Calculator — FAST, COMSATS, UET, LUMS 2026">
+  <meta name="twitter:description" content="Calculate your university aggregate for FAST, COMSATS, UET, and LUMS using commonly used admission formulas.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "University Merit Calculator Pakistan",
+    "url": "https://pakistanstudenttools.com/merit-calculator.html",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "PKR"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="nav-logo">Pakistan Student Tools</a>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropdown-toggle">Tools</button>
+          <div class="dropdown-menu">
+            <a href="matric-calculator.html">Matric Calculator</a>
+            <a href="inter-calculator.html">Inter Calculator</a>
+            <a href="nust-calculator.html">NUST Calculator</a>
+            <a href="cgpa-calculator.html">CGPA Calculator</a>
+            <a href="merit-calculator.html">Merit Calculator</a>
+            <a href="punjab-board.html">Punjab Board</a>
+            <a href="sindh-board.html">Sindh Board</a>
+            <a href="fbise-board.html">FBISE Board</a>
+          </div>
+        </div>
+        <a href="all-boards.html">Boards</a>
+        <a href="all-universities.html">Universities</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="breadcrumb container"><a href="index.html">Home</a> &rsaquo; University Merit Calculator</div>
+
+  <section class="section">
+    <div class="container calculator-card">
+      <h1>University Merit / Aggregate Calculator Pakistan 2026</h1>
+      <p class="mb-2">Calculate your admission aggregate for top Pakistani universities. Select your university below — the calculator will show the correct formula and input fields automatically.</p>
+      <!-- Trust Signals -->
+      <div class="trust-badges">
+        <span class="trust-badge">Free to Use</span>
+        <span class="trust-badge">No Signup Required</span>
+        <span class="trust-badge">Works on Mobile</span>
+        <span class="trust-badge">Updated 2026</span>
+      </div>
+
+      <div class="form-group">
+        <label>Select University</label>
+        <select id="university">
+          <option value="fast">FAST-NUCES (NAT Based)</option>
+          <option value="comsats">COMSATS University (NTS Based)</option>
+          <option value="uet">UET Lahore (ECAT Based)</option>
+          <option value="lums">LUMS (SAT / LCAT Based)</option>
+        </select>
+      </div>
+
+      <div class="card mb-2" id="formula-desc" style="background:#f0f7ff;"></div>
+
+      <div id="dynamic-fields"></div>
+
+      <div class="mt-2">
+        <button type="button" id="calculate-btn" class="btn btn-primary">Calculate Aggregate</button>
+      </div>
+
+      <div id="result-box" class="result-box hidden">
+        <div class="result-label"><span id="uni-name">University</span> Aggregate</div>
+        <div class="result-value" id="aggregate">0%</div>
+        <div id="breakdown"></div>
+      </div>
+
+      <!-- <div class="ad-placeholder mt-2">Ad Space</div> -->
+
+      <!-- How to Use -->
+      <div class="mt-2">
+        <h2>How to Use This Calculator</h2>
+        <ol>
+          <li>Select your target university from the dropdown.</li>
+          <li>The correct formula and input fields will appear automatically.</li>
+          <li>Enter your obtained and total marks for each component.</li>
+          <li>Click "Calculate Aggregate" to see your merit score.</li>
+        </ol>
+      </div>
+
+      <!-- University Formulas Explained -->
+      <div class="mt-2">
+        <h2>University Admission Formulas 2026</h2>
+
+        <h3>FAST-NUCES</h3>
+        <p><strong>Formula:</strong> 10% Matric + 40% Inter + 50% NAT</p>
+        <p>FAST-NUCES uses the National Aptitude Test (NAT) conducted by NTS. You need a minimum of 50% in NAT to be eligible. The merit is calculated using the above formula for BS Computer Science, Software Engineering, Electrical Engineering and other programs.</p>
+        <p><strong>Example:</strong> Matric 90% + Inter 85% + NAT 70% → (90×0.10) + (85×0.40) + (70×0.50) = 9 + 34 + 35 = <strong>78%</strong></p>
+
+        <h3>COMSATS University</h3>
+        <p><strong>Formula:</strong> 10% Matric + 40% Inter + 50% NTS</p>
+        <p>COMSATS uses a similar formula to FAST. The NTS test score carries 50% weight. COMSATS has campuses in Islamabad, Lahore, Abbottabad, Wah, Sahiwal, Attock, and Vehari.</p>
+        <p><strong>Example:</strong> Matric 88% + Inter 82% + NTS 75% → (88×0.10) + (82×0.40) + (75×0.50) = 8.8 + 32.8 + 37.5 = <strong>79.1%</strong></p>
+
+        <h3>UET Lahore</h3>
+        <p><strong>Formula:</strong> 30% FSc/Inter + 70% ECAT</p>
+        <p>University of Engineering and Technology Lahore gives heavy weightage (70%) to the ECAT entry test. This is one of the most competitive engineering admissions in Pakistan. Matric marks are not included in the UET aggregate formula.</p>
+        <p><strong>Example:</strong> Inter 85% + ECAT 65% → (85×0.30) + (65×0.70) = 25.5 + 45.5 = <strong>71%</strong></p>
+
+        <h3>LUMS</h3>
+        <p><strong>Formula:</strong> Holistic admissions (academics + SAT/LCAT + extracurriculars + interview)</p>
+        <p>LUMS does not publish a fixed formula. Admissions are holistic — they consider academics, test scores (SAT or LCAT/SBASSE test), extracurricular activities, essays, and interviews. Our calculator provides an estimated academic score based on 50% academics + 50% test score.</p>
+        <p><strong>Example:</strong> Inter 90% + SAT 85% → (90×0.50) + (85×0.50) = 45 + 42.5 = <strong>87.5% (estimated)</strong></p>
+      </div>
+
+      <!-- FAQ -->
+      <div class="mt-2">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <h3>Which test do I need for each university?</h3>
+          <p>FAST requires NAT (by NTS). COMSATS requires NTS. UET requires ECAT. LUMS accepts SAT or conducts its own LCAT/SBASSE test. NUST has its own NET — use our <a href="nust-calculator.html">NUST Calculator</a> for that.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Are these formulas official?</h3>
+          <p>These formulas are based on publicly available admission criteria from each university's official website. Always verify with the university's latest admission advertisement as criteria may change.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What is a good aggregate for engineering?</h3>
+          <p>For UET: 75%+ is competitive. For FAST/COMSATS: 70%+ is good for CS programs. For NUST: 80%+ for top programs. These vary by year and campus.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I use A-Level marks instead of Inter?</h3>
+          <p>Yes — most universities accept A-Level equivalence. IBCC issues equivalence certificates converting A-Level grades to marks out of 1100. Use the equivalence marks in this calculator.</p>
+        </div>
+      </div>
+
+      <!-- Related Tools -->
+      <div class="mt-2">
+        <h3>Related Tools</h3>
+        <ul class="content-page">
+          <li><a href="nust-calculator.html">NUST Aggregate Calculator</a></li>
+          <li><a href="cgpa-calculator.html">CGPA Calculator (4.0 & 5.0 Scale)</a></li>
+          <li><a href="inter-calculator.html">Inter Percentage Calculator</a></li>
+          <li><a href="matric-calculator.html">Matric Percentage Calculator</a></li>
+        </ul>
+      </div>
+    
+      <!-- Disclaimer -->
+      <div class="disclaimer mt-2">
+        <strong>Disclaimer:</strong> This website is not affiliated with any educational board or university. All calculators and tools provided on this site are for informational and estimation purposes only. While we strive to ensure accuracy, results may vary based on official policies and updates. Users are advised to verify results with official sources.
+      </div>
+
+      <!-- Related Tools -->
+      <div class="related-tools">
+        <h3>Related Tools</h3>
+        <a href="matric-calculator.html">Matric Calculator</a>
+        <a href="inter-calculator.html">Inter Calculator</a>
+        <a href="nust-calculator.html">NUST Calculator</a>
+        <a href="cgpa-calculator.html">CGPA Calculator</a>
+        <a href="merit-calculator.html">Merit Calculator</a>
+        <a href="all-boards.html">All Boards</a>
+        <a href="all-universities.html">All Universities</a>
+      </div>
+    </div>
+  </section>
+
+    <div class="last-updated">Last updated: March 2026</div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h4>Pakistan Student Tools</h4><p>Free online calculators for Pakistani students.</p></div>
+        <div><h4>Tools</h4><ul><li><a href="matric-calculator.html">Matric Calculator</a></li><li><a href="inter-calculator.html">Inter Calculator</a></li><li><a href="nust-calculator.html">NUST Calculator</a></li><li><a href="cgpa-calculator.html">CGPA Calculator</a></li><li><a href="merit-calculator.html">Merit Calculator</a></li></ul></div>
+        <div><h4>Pages</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy Policy</a></li></ul></div>
+      </div>
+            <p class="footer-disclaimer">This website is not affiliated with any educational board or university. All tools are for informational purposes only. Verify results with official sources.</p>
+      <div class="footer-bottom">&copy; 2026 Pakistan Student Tools. All rights reserved.</div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/merit-calculator.js"></script>
+</body>
+</html>
