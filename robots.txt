@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow:
 
-Sitemap: https://pakistanstudenttools.com/sitemap.xml
+Sitemap: https://pakistanstudenttools.netlify.app/sitemap.xml
