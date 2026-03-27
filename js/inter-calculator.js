@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Validate inputs
     const v1 = validateField('part1-obtained', 'part1-total');
     const v2 = validateField('part2-obtained', 'part2-total');
-    if (!v1 || !v2) { alert('Please check highlighted fields. Obtained marks cannot exceed total marks.'); return; }
+    if (!v1 || !v2) { if (window.showCalcError) window.showCalcError('Please check highlighted fields. Obtained marks cannot exceed total marks.'); return; }
 
     // Read Part 1 (HSSC-I) marks
     const part1Obtained = parseFloat(document.getElementById('part1-obtained').value) || 0;

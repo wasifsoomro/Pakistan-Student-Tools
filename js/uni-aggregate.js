@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (tot <= 0) { totEl.classList.add('input-error'); hasError = true; }
       if (obt > tot && tot > 0) { obtEl.classList.add('input-error'); hasError = true; }
     });
-    if (hasError) { alert('Please check highlighted fields. Obtained marks cannot exceed total marks.'); return; }
+    if (hasError) { if (window.showCalcError) window.showCalcError('Please check highlighted fields. Obtained marks cannot exceed total marks.'); return; }
 
     weights.forEach(w => {
       const obtained = parseFloat(document.getElementById(w.obtainedId).value) || 0;

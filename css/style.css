@@ -247,6 +247,116 @@ textarea { resize: vertical; min-height: 100px; }
 /* Last updated badge */
 .last-updated { font-size: .8rem; color: #94a3b8; text-align: center; margin: 1rem 0; }
 
+/* Hero CTA Button */
+.hero .btn-hero {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: .85rem 2rem;
+  background: #fff;
+  color: #2563eb;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background .2s, transform .2s;
+  text-decoration: none;
+}
+.hero .btn-hero:hover { background: #e0e7ff; transform: translateY(-2px); text-decoration: none; }
+
+/* Share Section */
+.share-section {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.share-section h4 { margin-bottom: .75rem; font-size: 1rem; color: #1e293b; }
+.share-buttons { display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; }
+.btn-whatsapp {
+  background: #25D366;
+  color: #fff;
+  padding: .6rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: .9rem;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  transition: background .2s;
+  text-decoration: none;
+}
+.btn-whatsapp:hover { background: #1ebe5d; text-decoration: none; color: #fff; }
+.btn-copy-link {
+  background: #e2e8f0;
+  color: #1e293b;
+  padding: .6rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: .9rem;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  transition: background .2s;
+}
+.btn-copy-link:hover { background: #cbd5e1; }
+.btn-copy-link.copied { background: #16a34a; color: #fff; }
+
+/* Bookmark Reminder */
+.bookmark-reminder {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  color: #64748b;
+  font-size: .9rem;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+}
+
+/* Result message above result */
+.result-message {
+  text-align: center;
+  font-size: .9rem;
+  color: #16a34a;
+  font-weight: 600;
+  margin-bottom: .75rem;
+}
+
+/* Most Used Tools Section */
+.most-used-section { background: #fff; padding: 3rem 1rem; }
+.most-used-section .card { border: 2px solid #e2e8f0; transition: border-color .2s, box-shadow .2s; }
+.most-used-section .card:hover { border-color: #2563eb; box-shadow: 0 4px 16px rgba(37,99,235,.15); }
+.fire-badge {
+  display: inline-block;
+  background: #fef2f2;
+  color: #dc2626;
+  font-size: .75rem;
+  font-weight: 700;
+  padding: .2rem .6rem;
+  border-radius: 999px;
+  margin-bottom: .5rem;
+}
+
+/* Inline Calculator Error */
+.calc-error {
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  color: #dc2626;
+  font-size: .9rem;
+  font-weight: 600;
+  padding: .6rem 1rem;
+  border-radius: 8px;
+  margin-bottom: .75rem;
+  text-align: center;
+}
+
 /* Utility */
 .text-center { text-align: center; }
 .mt-1 { margin-top: 1rem; }

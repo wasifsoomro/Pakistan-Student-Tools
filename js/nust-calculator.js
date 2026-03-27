@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const v1 = validatePair('matric-obtained', 'matric-total');
     const v2 = validatePair('inter-obtained', 'inter-total');
     const v3 = validatePair('entry-obtained', 'entry-total');
-    if (!v1 || !v2 || !v3) { alert('Please check highlighted fields. Obtained marks cannot exceed total marks.'); return; }
+    if (!v1 || !v2 || !v3) { if (window.showCalcError) window.showCalcError('Please check highlighted fields. Obtained marks cannot exceed total marks.'); return; }
 
     // Read Matric (SSC) marks — 10% weightage
     const matricObtained = parseFloat(document.getElementById('matric-obtained').value) || 0;

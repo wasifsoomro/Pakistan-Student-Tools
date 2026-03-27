@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Calculate total obtained, total marks, and percentage
   calcBtn.addEventListener('click', () => {
     const rows = container.querySelectorAll('.subject-row');
-    if (rows.length === 0) { alert('Please add at least one subject.'); return; }
+    if (rows.length === 0) { if (window.showCalcError) window.showCalcError('Please add at least one subject.'); return; }
 
     let totalObtained = 0, totalMax = 0, hasError = false;
 
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
       totalMax += total;
     });
 
-    if (hasError) { alert('Please check highlighted fields. Obtained marks cannot exceed total marks.'); return; }
+    if (hasError) { if (window.showCalcError) window.showCalcError('Please check highlighted fields. Obtained marks cannot exceed total marks.'); return; }
     if (totalMax === 0) return; // Avoid division by zero
 
     // Percentage formula: (obtained / total) × 100
