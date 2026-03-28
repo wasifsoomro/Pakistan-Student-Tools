@@ -264,49 +264,133 @@ textarea { resize: vertical; min-height: 100px; }
 }
 .hero .btn-hero:hover { background: #e0e7ff; transform: translateY(-2px); text-decoration: none; }
 
-/* Share Section */
+/* Share Section — Tool Share */
 .share-section {
   background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  border: 1px dashed #cbd5e1;
   border-radius: 12px;
-  padding: 1.25rem 1.5rem;
-  margin-top: 1.5rem;
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
   text-align: center;
 }
-.share-section h4 { margin-bottom: .75rem; font-size: 1rem; color: #1e293b; }
+.share-section h4 {
+  margin-bottom: .6rem;
+  font-size: .9rem;
+  color: #64748b;
+  font-weight: 500;
+}
 .share-buttons { display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; }
+
+/* WhatsApp button (used in tool share) */
 .btn-whatsapp {
   background: #25D366;
   color: #fff;
-  padding: .6rem 1.25rem;
+  padding: .55rem 1.1rem;
   border-radius: 8px;
   font-weight: 600;
-  font-size: .9rem;
+  font-size: .85rem;
   border: none;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: .4rem;
-  transition: background .2s;
+  transition: all .2s;
   text-decoration: none;
 }
-.btn-whatsapp:hover { background: #1ebe5d; text-decoration: none; color: #fff; }
+.btn-whatsapp svg { flex-shrink: 0; }
+.btn-whatsapp:hover { background: #1ebe5d; text-decoration: none; color: #fff; transform: translateY(-1px); }
+
+/* Copy Link button (used in tool share) */
 .btn-copy-link {
   background: #e2e8f0;
   color: #1e293b;
-  padding: .6rem 1.25rem;
+  padding: .55rem 1.1rem;
   border-radius: 8px;
   font-weight: 600;
-  font-size: .9rem;
+  font-size: .85rem;
   border: none;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: .4rem;
-  transition: background .2s;
+  transition: all .2s;
 }
-.btn-copy-link:hover { background: #cbd5e1; }
+.btn-copy-link svg { flex-shrink: 0; }
+.btn-copy-link:hover { background: #cbd5e1; transform: translateY(-1px); }
 .btn-copy-link.copied { background: #16a34a; color: #fff; }
+
+/* Dynamic Result Share — Primary CTA */
+.result-share {
+  background: linear-gradient(135deg, #eff6ff 0%, #f0f9ff 100%);
+  border: 2px solid #93c5fd;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  text-align: center;
+  transition: opacity .4s ease;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, .08);
+}
+.result-share-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  margin-bottom: .5rem;
+}
+.result-share-icon { font-size: 1.5rem; }
+.result-share-header h4 {
+  font-size: 1.1rem;
+  color: #1e40af;
+  font-weight: 700;
+}
+.result-share-text {
+  font-size: .82rem;
+  color: #475569;
+  font-style: italic;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  background: #fff;
+  padding: .6rem .75rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+/* Result share buttons — bigger and bolder */
+.btn-share-result {
+  background: #25D366;
+  color: #fff;
+  padding: .7rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: .95rem;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  transition: all .2s;
+  box-shadow: 0 2px 8px rgba(37, 211, 102, .25);
+}
+.btn-share-result svg { flex-shrink: 0; }
+.btn-share-result:hover { background: #1ebe5d; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(37, 211, 102, .35); }
+
+.btn-share-copy {
+  background: #fff;
+  color: #334155;
+  padding: .7rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: .95rem;
+  border: 2px solid #e2e8f0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  transition: all .2s;
+}
+.btn-share-copy svg { flex-shrink: 0; }
+.btn-share-copy:hover { border-color: #93c5fd; background: #f0f9ff; transform: translateY(-2px); }
+.btn-share-copy.copied { background: #16a34a; color: #fff; border-color: #16a34a; }
 
 /* Bookmark Reminder */
 .bookmark-reminder {
@@ -342,6 +426,50 @@ textarea { resize: vertical; min-height: 100px; }
   padding: .2rem .6rem;
   border-radius: 999px;
   margin-bottom: .5rem;
+}
+
+/* Calculator Tabs */
+.calc-tabs {
+  display: flex;
+  gap: .5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0;
+}
+.calc-tab {
+  padding: .75rem 1.5rem;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  transition: all .2s ease;
+}
+.calc-tab:hover { color: #2563eb; }
+.calc-tab.active {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+}
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* Semester Row */
+.semester-row {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr auto;
+  gap: .75rem;
+  align-items: end;
+  padding: .75rem 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+.semester-row .sem-label {
+  font-weight: 600;
+  color: #334155;
+  padding-bottom: .5rem;
+  white-space: nowrap;
 }
 
 /* Inline Calculator Error */

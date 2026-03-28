@@ -16,14 +16,16 @@
   <link rel="canonical" href="https://pakistanstudenttools.netlify.app/cgpa-calculator.html">
   <link rel="stylesheet" href="css/style.css">
   <!-- Google Analytics placeholder -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+  <link rel="icon" type="image/jpeg" href="favicon.jpg">
   <meta property="og:title" content="CGPA Calculator Pakistan — 4.0 & 5.0 Scale">
   <meta property="og:description" content="Free CGPA calculator for Pakistani university students. Supports 4.0 and 5.0 grading scales.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://pakistanstudenttools.netlify.app/og-image.jpg">
   <meta property="og:url" content="https://pakistanstudenttools.netlify.app/cgpa-calculator.html">
   <meta property="og:site_name" content="Pakistan Student Tools">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="CGPA Calculator Pakistan — 4.0 & 5.0 Scale">
+  <meta name="twitter:image" content="https://pakistanstudenttools.netlify.app/og-image.jpg">
   <meta name="twitter:description" content="Free CGPA calculator for Pakistani university students. Supports 4.0 and 5.0 grading scales.">
   <script type="application/ld+json">
   {
@@ -38,6 +40,65 @@
       "price": "0",
       "priceCurrency": "PKR"
     }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I convert CGPA to percentage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For 4.0 scale: multiply CGPA by 25 (e.g., 3.5 × 25 = 87.5%). For 5.0 scale: multiply by 20 (e.g., 4.0 × 20 = 80%). These are approximate conversions used by HEC."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good CGPA in Pakistan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On a 4.0 scale: 3.5+ is excellent, 3.0–3.49 is good, 2.5–2.99 is average. On a 5.0 scale: 4.0+ is excellent, 3.5–3.99 is good."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I calculate cumulative CGPA for multiple semesters?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — just add all courses from all semesters. The calculator will give you the cumulative CGPA across all courses entered."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which scale does HEC recommend?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HEC recommends the 4.0 grading scale for all Pakistani universities. Most newer and private universities have adopted it."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://pakistanstudenttools.netlify.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "CGPA Calculator"
+      }
+    ]
   }
   </script>
 </head>
@@ -76,34 +137,87 @@
     <div class="container calculator-card">
       <h1>CGPA Calculator Pakistan (4.0 & 5.0 Scale)</h1>
       <p class="mb-2">Calculate your semester or cumulative CGPA for any HEC-recognized Pakistani university. Supports both 4.0 scale (used by NUST, FAST, COMSATS, LUMS) and 5.0 scale (used by Punjab University, UET and others).</p>
-      <!-- Trust Signals -->
-      <div class="trust-badges">
-        <span class="trust-badge">Free to Use</span>
-        <span class="trust-badge">No Signup Required</span>
-        <span class="trust-badge">Works on Mobile</span>
-        <span class="trust-badge">Updated 2026</span>
+
+      <!-- Calculator Mode Tabs -->
+      <div class="calc-tabs">
+        <button class="calc-tab active" data-tab="gpa-tab">Semester GPA</button>
+        <button class="calc-tab" data-tab="cgpa-tab">Cumulative CGPA</button>
       </div>
 
-      <div class="form-group">
-        <label>GPA Scale</label>
-        <select id="gpa-scale">
-          <option value="4">4.0 Scale (NUST, FAST, COMSATS, LUMS)</option>
-          <option value="5">5.0 Scale (Punjab University, UET)</option>
-        </select>
+      <!-- ===== TAB 1: Semester GPA Calculator ===== -->
+      <div id="gpa-tab" class="tab-content active">
+        <h2>Semester GPA Calculator</h2>
+        <p class="mb-1">Enter your courses for a single semester to calculate your GPA.</p>
+
+        <div class="form-group">
+          <label>GPA Scale</label>
+          <select id="gpa-scale">
+            <option value="4">4.0 Scale (NUST, FAST, COMSATS, LUMS)</option>
+            <option value="5">5.0 Scale (Punjab University, UET)</option>
+          </select>
+        </div>
+
+        <div id="courses-container"></div>
+        <button type="button" id="add-course" class="btn btn-secondary mt-1">+ Add Course</button>
+        <div class="mt-2">
+          <button type="button" id="calculate-btn" class="btn btn-primary">Calculate Semester GPA</button>
+        </div>
+
+        <div id="result-box" class="result-box hidden">
+          <div class="result-label">Your Semester GPA</div>
+          <div class="result-value" id="cgpa">0.00</div>
+          <p>Out of <strong id="max-gpa">4.00</strong></p>
+          <p>Total Credits: <strong id="total-credits">0</strong> | Quality Points: <strong id="total-points">0</strong></p>
+          <p>Estimated Percentage: <strong id="pct-estimate">0%</strong></p>
+        </div>
       </div>
 
-      <div id="courses-container"></div>
-      <button type="button" id="add-course" class="btn btn-secondary mt-1">+ Add Course</button>
-      <div class="mt-2">
-        <button type="button" id="calculate-btn" class="btn btn-primary">Calculate CGPA</button>
-      </div>
+      <!-- ===== TAB 2: Cumulative CGPA Calculator ===== -->
+      <div id="cgpa-tab" class="tab-content">
+        <h2>Cumulative CGPA Calculator</h2>
+        <p class="mb-1">Enter your GPA and credit hours for each semester to calculate your overall CGPA.</p>
 
-      <div id="result-box" class="result-box hidden">
-        <div class="result-label">Your CGPA</div>
-        <div class="result-value" id="cgpa">0.00</div>
-        <p>Out of <strong id="max-gpa">4.00</strong></p>
-        <p>Total Credits: <strong id="total-credits">0</strong> | Quality Points: <strong id="total-points">0</strong></p>
-        <p>Estimated Percentage: <strong id="pct-estimate">0%</strong></p>
+        <div class="form-group">
+          <label>GPA Scale</label>
+          <select id="cgpa-scale">
+            <option value="4">4.0 Scale (NUST, FAST, COMSATS, LUMS)</option>
+            <option value="5">5.0 Scale (Punjab University, UET)</option>
+          </select>
+        </div>
+
+        <div id="semesters-container"></div>
+        <button type="button" id="add-semester" class="btn btn-secondary mt-1">+ Add Semester</button>
+        <div class="mt-2">
+          <button type="button" id="calculate-cgpa-btn" class="btn btn-primary">Calculate CGPA</button>
+        </div>
+
+        <div id="cgpa-result-box" class="result-box hidden">
+          <div class="result-label">Your Cumulative CGPA</div>
+          <div class="result-value" id="cumulative-cgpa">0.00</div>
+          <p>Out of <strong id="cgpa-max-gpa">4.00</strong></p>
+          <p>Total Semesters: <strong id="total-semesters">0</strong> | Total Credits: <strong id="cgpa-total-credits">0</strong></p>
+          <p>Estimated Percentage: <strong id="cgpa-pct-estimate">0%</strong></p>
+        </div>
+
+        <div id="cgpa-share-result" class="result-share hidden">
+          <div class="result-share-header">
+            <span class="result-share-icon">🎉</span>
+            <h4>Share Your Result</h4>
+          </div>
+          <p class="result-share-text" id="cgpa-share-text"></p>
+          <div class="share-buttons">
+            <button class="btn-share-result" id="cgpa-wa-btn">WhatsApp</button>
+            <button class="btn-share-copy" id="cgpa-copy-btn">Copy Message</button>
+          </div>
+        </div>
+        <div id="cgpa-share-tool" class="share-section hidden">
+          <h4>Know someone who needs this? Share it!</h4>
+          <div class="share-buttons">
+            <button class="btn-whatsapp" id="cgpa-wa-tool">Send on WhatsApp</button>
+            <button class="btn-copy-link" id="cgpa-copy-link">Copy Link</button>
+          </div>
+        </div>
+        <div class="bookmark-reminder">Bookmark this page to use it later (Ctrl+D)</div>
       </div>
 
       <!-- <div class="ad-placeholder mt-2">Ad Space</div> -->
