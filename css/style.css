@@ -492,3 +492,37 @@ textarea { resize: vertical; min-height: 100px; }
 .mb-1 { margin-bottom: 1rem; }
 .mb-2 { margin-bottom: 2rem; }
 .hidden { display: none; }
+
+/* Small phones */
+@media (max-width: 480px) {
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.25rem; }
+  .hero { padding: 2rem 0.75rem; }
+  .hero h1 { font-size: 1.6rem; }
+  .hero p { font-size: 0.95rem; }
+  .hero .btn-hero { padding: .7rem 1.5rem; font-size: 1rem; }
+  .section { padding: 2rem 0.75rem; }
+  .container { padding: 0 0.75rem; }
+  .grid-2 { grid-template-columns: 1fr; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .card { padding: 1.1rem; }
+  .result-box { padding: 1rem; }
+  .result-box .result-value { font-size: 2rem; }
+  .btn { padding: .6rem 1.2rem; font-size: .9rem; min-height: 44px; }
+  .btn-primary { min-height: 44px; }
+  .btn-share-result, .btn-share-copy { padding: .6rem 1rem; font-size: .85rem; min-height: 44px; }
+  .btn-whatsapp, .btn-copy-link { min-height: 44px; }
+  .form-group input, .form-group select { padding: .7rem .75rem; font-size: 1rem; min-height: 44px; }
+  .subject-row { grid-template-columns: 1fr; gap: .5rem; }
+  .calc-tabs { gap: .25rem; overflow-x: auto; }
+  .calc-tab { padding: .6rem 1rem; font-size: .9rem; white-space: nowrap; }
+  .semester-row { grid-template-columns: 1fr 1fr; gap: .5rem; }
+  .share-buttons { flex-direction: column; align-items: center; }
+  .result-share { padding: 1rem; }
+  .footer-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .related-tools a { font-size: .8rem; padding: .35rem .7rem; }
+  .breadcrumb { font-size: .8rem; padding: .5rem .75rem; }
+  .faq-item h3 { font-size: .95rem; }
+  .trust-badges { gap: .5rem; }
+  .trust-badge { padding: .4rem .75rem; font-size: .8rem; }
+}
